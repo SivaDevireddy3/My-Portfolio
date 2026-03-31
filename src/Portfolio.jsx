@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from "react";
 
 const NAV = ["Home", "About", "Experience", "Skills", "Contact"];
 
+const titles = ["Full Stack Developer", "Backend Engineer", "Problem Solver", "LeetCode Knight"];
+
 const SKILLS = [
   { name: "Java", pct: 90, color: "#f97316" },
   { name: "Spring Boot", pct: 88, color: "#22d3ee" },
@@ -149,7 +151,6 @@ export default function Portfolio() {
   const [certRef, certV] = useInView();
   const [contactRef, contactV] = useInView();
 
-  const titles = ["Full Stack Developer", "Backend Engineer", "Problem Solver", "LeetCode Knight"];
   const tIdx = useRef(0), charIdx = useRef(0), deleting = useRef(false);
 
   useEffect(() => { setTimeout(() => setReady(true), 150); }, []);
